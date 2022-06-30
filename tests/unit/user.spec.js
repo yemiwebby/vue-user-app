@@ -1,10 +1,10 @@
-import { mount, shallowMount } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import UserList from "@/components/UserList.vue";
 
 describe("User List component unit tests: ", () => {
   it("renders props when passed", () => {
     const message = "new message";
-    const wrapper = shallowMount(UserList, {
+    const wrapper = mount(UserList, {
       props: { message },
     });
     expect(wrapper.text()).toMatch(message);
